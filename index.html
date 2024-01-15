@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <title>Profin</title>
+</head>
+<body>
+    <div class="box">
+        <div class="profile">
+            <img src="./icon.png">
+            <span>PROFIN</span>
+            <span>サンプルテキスト</span>
+        </div>
+
+        <div class="write">
+            <h1>About</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi a inventore iure consectetur libero, at voluptas reiciendis animi perspiciatis sapiente incidunt eos earum delectus porro illo accusamus, veritatis atque. Nisi.</p>
+        </div>
+
+        <div class="write">
+            <h1>Links</h1>
+            <p>Example links.</p>
+        </div>
+
+        <div class="links">
+            <a href="https://example.com/">
+                <span>Example</span>
+                <p>example.com</p>
+            </a>
+
+            <a href="https://example.com/">
+                <span>Example</span>
+                <p>example.com</p>
+            </a>
+
+            <a href="htts://example.com/">
+                <span>Example</span>
+                <p>example.com</p>
+            </a>
+        </div>
+  
+    </div>
+
+    <footer>
+        <span>&copy; 2024 Profin.</span>
+    </footer>
+
+    <style>
+        :root {
+            --c-wall-bg: #182335;
+            --c-content-bg: #254555;
+            --c-text: #eee;
+        }
+
+        * {
+            word-break: break-word;
+            font-family: "Zen Maru Gothic", sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--c-wall-bg);
+            margin: 48px 0;
+        }
+
+        body * {
+            color: var(--c-text);
+        }
+
+        footer {
+            width: 90%;
+            max-width: 540px;
+            margin: 16px auto;
+            text-align: center;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--c-content-bg);
+            width: 90%;
+            max-width: 540px;
+            margin: 16px auto;
+            padding: 16px;
+            border-radius: 8px;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 8px;
+            margin: 16px 0;
+        }
+
+        .profile > img {
+            width: 8%;
+            min-width: 48px;
+            border-radius: 50%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+
+        .profile > span {
+            display: inline-block;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin: 16px 0;
+        }
+
+        .links * {
+            margin: 0;
+        }
+
+        .links > a {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--c-wall-bg);
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        .links > a:hover {
+            opacity: 0.8;
+        }
+
+        .links > a > span {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .links > a > p {
+            font-size: 14px;
+        }
+
+        .write {
+            margin: 8px 0;
+        }
+
+        .write * {
+            margin: 0;
+        }
+    </style>
+</body>
+</html>
