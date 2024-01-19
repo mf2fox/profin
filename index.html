@@ -18,8 +18,22 @@
 
         <div class="write">
             <h1>About</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi a inventore iure consectetur libero, at voluptas reiciendis animi perspiciatis sapiente incidunt eos earum delectus porro illo accusamus, veritatis atque. Nisi.</p>
+            <p>Lorem <a href="">ipsum</a> dolor sit amet consectetur adipisicing elit. Nisi a inventore iure consectetur libero, at voluptas reiciendis animi perspiciatis sapiente incidunt eos earum delectus porro illo accusamus, veritatis atque. Nisi.</p>
         </div>
+
+        <div class="write">
+            <h1>Image</h1>
+            <p>Example image.</p>
+        </div>
+
+        <img src="./icon.png">
+
+        <div class="write">
+            <h1>Embed video</h1>
+            <p>Example embed video.</p>
+        </div>
+
+        <iframe class="embed-video" src="https://www.youtube-nocookie.com/embed/ywXQ9SqsaBQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
         <div class="write">
             <h1>Links</h1>
@@ -37,19 +51,44 @@
                 <p>example.com</p>
             </a>
 
-            <a href="htts://example.com/">
+            <a href="https://example.com/">
                 <span>Example</span>
                 <p>example.com</p>
+            </a>
+        </div>
+
+        <div class="write">
+            <h1>Tail links</h1>
+            <p>Example tail links.</p>
+        </div>
+
+        <div class="tile-links">
+            <a href="https://example.com/">
+                <img src="./icon.png">
+                <span>Example.com</span>
+            </a>
+
+            <a href="https://example.com/">
+                <img src="./icon.png">
+                <span>Example.com</span>
+            </a>
+
+            <a href="https://example.com/">
+                <img src="./icon.png">
+                <span>Example.com</span>
             </a>
         </div>
   
     </div>
 
     <footer>
-        <span>&copy; 2024 Profin.</span>
+        <div>
+            <span>&copy; 2024 Profin.</span>
+            <span>Template: <a href="https://github.com/mf2fox/profin">Profin</a></span>
+        </div>
     </footer>
 
-    <style>
+    <style type="text/css">
         :root {
             --c-wall-bg: #182335;
             --c-content-bg: #254555;
@@ -75,7 +114,13 @@
             width: 90%;
             max-width: 540px;
             margin: 16px auto;
-            text-align: center;
+        }
+
+        footer > div {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
         }
 
         .box {
@@ -87,6 +132,15 @@
             margin: 16px auto;
             padding: 16px;
             border-radius: 8px;
+        }
+
+        .box > img, .box > video {
+            background-color: var(--c-wall-bg);
+            width: 100%;
+            margin: 8px 0;
+            border-radius: 8px;
+            aspect-ratio: 16/9;
+            object-fit: contain;
         }
 
         .profile {
@@ -103,10 +157,18 @@
             border-radius: 50%;
             aspect-ratio: 1/1;
             object-fit: cover;
+            -webkit-user-drag: none;
         }
 
         .profile > span {
             display: inline-block;
+        }
+
+        .embed-video {
+            width: 100%;
+            margin: 8px 0!important;
+            border-radius: 8px;
+            aspect-ratio: 16/9;
         }
 
         .links {
@@ -140,6 +202,42 @@
 
         .links > a > p {
             font-size: 14px;
+        }
+
+        .tile-links {
+            display: grid;
+            gap: 8px;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            margin: 16px 0;
+        }
+
+        .tile-links > a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: var(--c-wall-bg);
+            padding: 8px;
+            border-radius: 8px;
+            text-decoration: none;
+            aspect-ratio: 1/1;
+            object-fit: contain;
+        }
+
+        .tile-links > a > img {
+            width: 30%;
+            min-width: 48px;
+            border-radius: 50%;
+            -webkit-user-drag: none;
+        }
+
+        .tile-links > a > span {
+            display: -webkit-box;
+            font-size: 18px;
+            font-weight: bold;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
         }
 
         .write {
